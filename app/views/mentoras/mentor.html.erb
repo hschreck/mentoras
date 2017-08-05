@@ -1,0 +1,14 @@
+<h1>Be a Mentor</h1>
+Hey, thanks for volunteering to be a mentor!  Mentoras isn't functional yet, but if you leave your contact info I'll let you know as soon as it's ready to launch!
+
+<%= form_for @mentor, url: url_for(action: 'new_mentor') do |f| %>
+  <%= label_tag(:name, "Name") %>
+  <%= f.text_field :name %>
+  <%= label_tag(:location, "Location") %>
+  <%= f.text_field :location %>
+  <%= label_tag(:description, "About you") %>
+  <%= f.text_area :description %>
+  <%= label_tag(:email, "Email")%>
+  <%= f.email_field :email %>
+  <%= f.submit "Contact me!" %>
+<% end %>
